@@ -8,12 +8,12 @@ int main()
 {
 	string s = "FFF-0", e = ".1-21-00005";
 	string f;
-	double a[120][1000];
-	int nn = 1000;
+	static double a[400][4283];
+	int nn = 4283;
 	int num;
-	for (int i = 11; i < 131; ++i)
+	for (int i = 111; i < 511; ++i)
 	{
-		num = i - 11;
+		num = i - 111;
 		if (i<100)
 			f = s + "0" + to_string(i) + e;
 		else
@@ -44,11 +44,11 @@ int main()
 	//		cout << a[m][i] << ' ';
 	//	cout << endl;
 	//}
-	double res[1000];
-	memset(res, 0, nn*8);
+	double res[4283];
+	memset(res, 0, nn * 8);
 	for (int i = 0; i < nn; ++i)
 	{
-		for (int j = 0; j < 120; ++j)
+		for (int j = 0; j < 400; ++j)
 			res[i] += a[j][i];
 	}
 	for (int i = 0; i < nn; ++i)
