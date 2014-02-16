@@ -41,7 +41,11 @@ void placeKing(int row, int* &pos, int n, int &ans)
 				for (int j = 0; j <= row - 2; ++j)
 				{
 					if (i == pos[j])
-						test = false;
+					{
+							test = false;
+							break;
+					}
+					
 				}
 				if (test == true)
 				{
